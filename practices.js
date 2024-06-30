@@ -22,6 +22,8 @@ You can assume that you do get an array and if the array is empty, return 0.
 What We're Testing
 We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 Advanced users may find this extremely easy and can easily write this in one line.*/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.hoopCount = void 0;
 function sum(numbers) {
     let total = 0;
     for (let i = 0; i <= numbers.length; i++) {
@@ -259,4 +261,67 @@ Complete the solution so that it reverses the string passed into it.
 function reverseString(str) {
     return str.split("").reverse().join("");
 }
-console.log(reverseString("world"));
+//console.log(reverseString("world"));
+/*
+Keep up the hoop
+
+DESCRIPTION:
+Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him.
+
+Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message:
+
+If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
+If he doesn't get 10 hoops, return the string "Keep at it until you get it".
+*/
+function hoopCount(n) {
+    return n >= 10
+        ? "Great, now move on to tricks"
+        : "Keep at it until you get it";
+}
+exports.hoopCount = hoopCount;
+// console.log(hoopCount(6));
+// console.log(hoopCount(10));
+// console.log(hoopCount(22));
+/*
+Detect Pangram
+
+DESCRIPTION:
+A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+*/
+function isPangram(phrase) {
+    let separator = phrase.toLowerCase().split("");
+    let characters = [];
+    let exceptions = [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "0",
+        " ",
+        ".",
+        ",",
+    ];
+    for (let i = 0; i <= separator.length; i++) {
+        if (exceptions.includes(separator[i]) || separator[i] == undefined) {
+        }
+        else if (!characters.includes(separator[i])) {
+            characters.push(separator[i]);
+        }
+    }
+    console.log(characters);
+    if (characters.length == 26) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+//console.log(isPangram("The quick brown fox jumps over the lazy dog."));
+console.log(isPangram("ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ"));
