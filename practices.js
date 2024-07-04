@@ -376,3 +376,156 @@ function openOrSenior(data) {
 //     [12, 12],
 //   ])
 // );
+/*
+DNA to RNA Conversion
+
+DESCRIPTION:
+Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. It is composed of four nucleic acid bases Guanine ('G'), Cytosine ('C'), Adenine ('A'), and Thymine ('T').
+
+Ribonucleic acid, RNA, is the primary messenger molecule in cells. RNA differs slightly from DNA its chemical structure and contains no Thymine. In RNA Thymine is replaced by another nucleic acid Uracil ('U').
+
+Create a function which translates a given DNA string into RNA.
+
+For example:
+
+"GCAT"  =>  "GCAU"
+The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid, i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.
+
+
+*/
+function DNAtoRNA(dna) {
+    // create a function which returns an RNA sequence from the given DNA sequence
+    let splitted;
+    splitted = dna.split("");
+    for (let i = 0; i <= splitted.length; i++) {
+        if (splitted[i] == "T") {
+            splitted[i] = "U";
+        }
+    }
+    return splitted.join("");
+}
+// console.log(DNAtoRNA("TTTT"));
+// console.log("GCAT");
+// console.log("GACCGCCGCC");
+/*
+Beginner Series #3 Sum of Numbers
+
+DESCRIPTION:
+Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+
+Note: a and b are not ordered!
+
+Examples (a, b) --> output (explanation)
+(1, 0) --> 1 (1 + 0 = 1)
+(1, 2) --> 3 (1 + 2 = 3)
+(0, 1) --> 1 (0 + 1 = 1)
+(1, 1) --> 1 (1 since both are same)
+(-1, 0) --> -1 (-1 + 0 = -1)
+(-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+Your function should only return a number, not the explanation about how you get that number.
+*/
+function getSum(a, b) {
+    //Good luck!
+    let result = 0;
+    let first;
+    let second;
+    //console.log(Math.sign(a));
+    if (a < b) {
+        first = a;
+        second = b;
+    }
+    else {
+        first = b;
+        second = a;
+    }
+    for (let i = first; i <= second; i++) {
+        result = result + i;
+    }
+    return result;
+}
+//console.log(getSum(5, -1));
+// console.log(getSum(0, -1));
+// console.log(getSum(0, 1));
+// console.log(getSum(2, 2));
+/*
+MakeUpperCase
+
+DESCRIPTION:
+Write a function which converts the input string to uppercase.
+*/
+function makeUpperCase(str) {
+    // Code here
+    return str.toUpperCase();
+}
+// console.log(makeUpperCase(""), "");
+// console.log(makeUpperCase("hello"), "HELLO");
+// console.log(makeUpperCase("Hello"), "HELLO");
+// console.log(makeUpperCase("HELLO"), "HELLO");
+/*
+Shortest Word
+
+DESCRIPTION
+
+Simple, given a string of words, return the length of the shortest word(s).
+
+String will never be empty and you do not need to account for different data types.
+*/
+function findShort(s) {
+    let result = 0;
+    let allLongs = [];
+    for (let ss of s.split(" ")) {
+        allLongs.push(ss.length);
+    }
+    allLongs.sort((a, b) => a - b);
+    result = allLongs[0];
+    return result;
+}
+// console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+// console.log(
+//   findShort(
+//     "turns out random test cases are easier than writing out basic ones"
+//   )
+// );
+// console.log(findShort("Let's travel abroad shall we"));
+/*
+Beginner - Reduce but Grow
+
+DESCRIPTION:
+Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+*/
+function grow(x) {
+    return x.reduce((acc, curr) => acc * curr);
+}
+// console.log(grow([1, 2, 3]));
+// console.log(grow([4, 1, 1, 1, 4]));
+// console.log(grow([2, 2, 2, 2, 2, 2]));
+/*
+Descending Order
+
+DESCRIPTION:
+Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+Examples:
+Input: 42145 Output: 54421
+
+Input: 145263 Output: 654321
+
+Input: 123456789 Output: 987654321
+*/
+function descendingOrder(n) {
+    //...
+    let conString = n.toString().split("");
+    let arrayNum = [];
+    for (let i = 0; i < conString.length; i++) {
+        arrayNum.push(Number(conString[i]));
+    }
+    return Number(arrayNum.sort((a, b) => b - a).join(""));
+}
+// console.log(descendingOrder(123456789));
+// console.log(descendingOrder(0));
+// console.log(descendingOrder(1));
+// console.log(descendingOrder(111));
+// console.log(descendingOrder(15));
+// console.log(descendingOrder(1021));
