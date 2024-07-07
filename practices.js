@@ -603,4 +603,58 @@ function printerError(s) {
     s.split("").map((elem) => (elem.match(/[a-m]/g) ? "" : errCount.push(elem)));
     return `${errCount.length}/${s.length}`;
 }
-console.log(printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"));
+// console.log(
+//   printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz")
+// );
+/*
+Ones and Zeros
+
+DESCRIPTION:
+Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+
+Examples:
+
+Testing: [0, 0, 0, 1] ==> 1
+Testing: [0, 0, 1, 0] ==> 2
+Testing: [0, 1, 0, 1] ==> 5
+Testing: [1, 0, 0, 1] ==> 9
+Testing: [0, 0, 1, 0] ==> 2
+Testing: [0, 1, 1, 0] ==> 6
+Testing: [1, 1, 1, 1] ==> 15
+Testing: [1, 0, 1, 1] ==> 11
+However, the arrays can have varying lengths, not just limited to 4.
+*/
+const binaryArrayToNumber = (arr) => {
+    // your code
+    let result = [];
+    arr.reverse();
+    for (let i = 0; i < arr.length; i++) {
+        result.push(arr[i] * Math.pow(2, i));
+    }
+    return result.reduce((prev, curr) => prev + curr, 0);
+    //return parseInt(arr.join(""), 2);
+};
+// console.log(binaryArrayToNumber([1, 1, 1, 1]));
+// console.log(binaryArrayToNumber([0, 1, 1, 0]));
+// console.log(binaryArrayToNumber([0, 0, 1, 0]));
+// console.log(binaryArrayToNumber([1, 0, 0, 1, 1]));
+/*
+Square(n) Sum
+
+DESCRIPTION:
+Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9
+*/
+function squareSum(numbers) {
+    let increased = [];
+    for (let i = 0; i < numbers.length; i++) {
+        increased.push(Math.pow(numbers[i], 2));
+    }
+    return increased.reduce((prev, curr) => prev + curr, 0);
+}
+// console.log(squareSum([1, 2]));
+// console.log(squareSum([0, 3, 4, 5]));
+// console.log(squareSum([]));
