@@ -658,3 +658,43 @@ function squareSum(numbers) {
 // console.log(squareSum([1, 2]));
 // console.log(squareSum([0, 3, 4, 5]));
 // console.log(squareSum([]));
+/*
+Even or Odd
+
+DESCRIPTION:
+Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+*/
+function evenOrOdd(number) {
+    return number % 2 == 0 ? "Even" : "Odd";
+}
+// console.log(evenOrOdd(2));
+// console.log(evenOrOdd(7));
+// console.log(evenOrOdd(-42));
+// console.log(evenOrOdd(-7));
+// console.log(evenOrOdd(0));
+/*
+List Filtering
+
+DESCRIPTION:
+In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+Example
+filter_list([1,2,'a','b']) == [1,2]
+filter_list([1,'a','b',0,15]) == [1,0,15]
+filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+*/
+function filter_list(l) {
+    //Solution #1
+    let filtered = [];
+    for (let element of l) {
+        if (typeof element == "number") {
+            filtered.push(element);
+        }
+    }
+    return filtered;
+    //Solution #2
+    //return l.filter((element) => typeof element == "number");
+}
+// console.log(filter_list([1, 2, "a", "b"]));
+// console.log(filter_list([1, "a", "b", 0, 15]));
+// console.log(filter_list([1, 2, "aasf", "1", "123", 123]));
