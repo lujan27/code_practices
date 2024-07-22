@@ -22,7 +22,7 @@ What We're Testing
 We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 Advanced users may find this extremely easy and can easily write this in one line.*/
 
-function sum(numbers: number[]) {
+export const sum = function (numbers: number[]): number {
   let total: number = 0;
 
   for (let i = 0; i <= numbers.length; i++) {
@@ -36,7 +36,7 @@ function sum(numbers: number[]) {
   }
 
   return total;
-}
+};
 
 //console.log(sum([1, 5.2, 4, 0, -1]));
 
@@ -909,4 +909,26 @@ export function spinWords(words: string): string {
   //   .join(" ");
 }
 
-console.log(spinWords("Hey fellow warriors"));
+//console.log(spinWords("Hey fellow warriors"));
+
+/*
+Duplicate Encoder
+
+DESCRIPTION:
+The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+
+Examples
+"din"      =>  "((("
+"recede"   =>  "()()()"
+"Success"  =>  ")())())"
+"(( @"     =>  "))((" 
+Notes
+Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
+*/
+
+export function duplicateEncode(word: string) {}
+
+// console.log(duplicateEncode("din"));
+// console.log(duplicateEncode("recede"));
+// console.log(duplicateEncode("Success"));
+// console.log(duplicateEncode("(( @"));
