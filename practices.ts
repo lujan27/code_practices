@@ -49,7 +49,7 @@ Timmy & Sarah think they are in love, but around where they live, they will only
 Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
 */
 
-function lovefunc(flower1: number, flower2: number) {
+export const lovefunc = function (flower1: number, flower2: number) {
   if (flower1 % 2 == 0 && flower2 % 2 != 0) {
     return true;
   } else if (flower1 % 2 != 0 && flower2 % 2 == 0) {
@@ -57,7 +57,7 @@ function lovefunc(flower1: number, flower2: number) {
   } else {
     return false;
   }
-}
+};
 
 // console.log(lovefunc(1, 4));
 // console.log(lovefunc(2, 2));

@@ -23,7 +23,7 @@ What We're Testing
 We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 Advanced users may find this extremely easy and can easily write this in one line.*/
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sum = void 0;
+exports.lovefunc = exports.sum = void 0;
 exports.hoopCount = hoopCount;
 exports.spinWords = spinWords;
 exports.duplicateEncode = duplicateEncode;
@@ -49,7 +49,7 @@ Timmy & Sarah think they are in love, but around where they live, they will only
 
 Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
 */
-function lovefunc(flower1, flower2) {
+const lovefunc = function (flower1, flower2) {
     if (flower1 % 2 == 0 && flower2 % 2 != 0) {
         return true;
     }
@@ -59,7 +59,8 @@ function lovefunc(flower1, flower2) {
     else {
         return false;
     }
-}
+};
+exports.lovefunc = lovefunc;
 // console.log(lovefunc(1, 4));
 // console.log(lovefunc(2, 2));
 // console.log(lovefunc(0, 1));
@@ -773,7 +774,6 @@ function spinWords(words) {
     //   )
     //   .join(" ");
 }
-
 //console.log(spinWords("Hey fellow warriors"));
 /*
 Duplicate Encoder
