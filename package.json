@@ -1,0 +1,21 @@
+{
+  "name": "code_practices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "practices.js",
+  "scripts": {
+    "test": "mocha --require ts-node/register test/**.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.7",
+    "chai": "^4.3.7",
+    "mocha": "^10.7.0",
+    "nyc": "^17.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
