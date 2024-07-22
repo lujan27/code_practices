@@ -773,6 +773,7 @@ function spinWords(words) {
     //   )
     //   .join(" ");
 }
+
 //console.log(spinWords("Hey fellow warriors"));
 /*
 Duplicate Encoder
