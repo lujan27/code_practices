@@ -79,7 +79,7 @@ The number can be negative already, in which case no change is required.
 Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
 */
 
-function makeNegative(num: number) {
+export const makeNegative = function (num: number): number {
   let newNum: string;
 
   if (num >= 0 && num != 0) {
@@ -88,8 +88,8 @@ function makeNegative(num: number) {
     newNum = num.toString();
   }
 
-  return newNum;
-}
+  return Number(newNum);
+};
 
 //console.log(makeNegative(1)); // return -1
 //console.log(makeNegative(-5)); // return -5
