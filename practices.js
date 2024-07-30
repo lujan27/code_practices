@@ -23,7 +23,7 @@ What We're Testing
 We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 Advanced users may find this extremely easy and can easily write this in one line.*/
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.lovefunc = exports.sum = void 0;
+exports.makeNegative = exports.lovefunc = exports.sum = void 0;
 exports.hoopCount = hoopCount;
 exports.spinWords = spinWords;
 exports.duplicateEncode = duplicateEncode;
@@ -79,7 +79,7 @@ Notes
 The number can be negative already, in which case no change is required.
 Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
 */
-function makeNegative(num) {
+const makeNegative = function (num) {
     let newNum;
     if (num >= 0 && num != 0) {
         newNum = `-${num}`;
@@ -87,8 +87,9 @@ function makeNegative(num) {
     else {
         newNum = num.toString();
     }
-    return newNum;
-}
+    return Number(newNum);
+};
+exports.makeNegative = makeNegative;
 //console.log(makeNegative(1)); // return -1
 //console.log(makeNegative(-5)); // return -5
 //console.log(makeNegative(0)); // return 0
