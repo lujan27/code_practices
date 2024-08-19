@@ -986,4 +986,16 @@ let arr4 = [
   79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97,
   98, 99,
 ];
-console.log(missingNo(arr4));
+//console.log(missingNo(arr4));
+
+export const min = (list: number[]): number => {
+  return list.sort((a, b) => a - b)[0];
+};
+
+//console.log(min([-52, 56, 30, 29, -54, 0, -110]));
+
+export const max = (list: number[]): number => {
+  return list.sort((a, b) => b - a)[0];
+};
+
+//console.log(max([4, 6, 2, 1, 9, 63, -134, 566]));
