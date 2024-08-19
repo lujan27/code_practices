@@ -23,7 +23,7 @@ What We're Testing
 We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 Advanced users may find this extremely easy and can easily write this in one line.*/
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.missingNo = exports.makeNegative = exports.lovefunc = exports.sum = void 0;
+exports.max = exports.min = exports.missingNo = exports.makeNegative = exports.lovefunc = exports.sum = void 0;
 exports.hoopCount = hoopCount;
 exports.spinWords = spinWords;
 exports.duplicateEncode = duplicateEncode;
@@ -843,4 +843,14 @@ let arr4 = [
     79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97,
     98, 99,
 ];
-console.log((0, exports.missingNo)(arr4));
+//console.log(missingNo(arr4));
+const min = (list) => {
+    return list.sort((a, b) => a - b)[0];
+};
+exports.min = min;
+//console.log(min([-52, 56, 30, 29, -54, 0, -110]));
+const max = (list) => {
+    return list.sort((a, b) => b - a)[0];
+};
+exports.max = max;
+//console.log(max([4, 6, 2, 1, 9, 63, -134, 566]));
