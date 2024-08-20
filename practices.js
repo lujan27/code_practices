@@ -23,7 +23,7 @@ What We're Testing
 We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 Advanced users may find this extremely easy and can easily write this in one line.*/
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.narcissistic = exports.max = exports.min = exports.missingNo = exports.makeNegative = exports.lovefunc = exports.sum = void 0;
+exports.digitalRoot = exports.narcissistic = exports.max = exports.min = exports.missingNo = exports.makeNegative = exports.lovefunc = exports.sum = void 0;
 exports.hoopCount = hoopCount;
 exports.spinWords = spinWords;
 exports.duplicateEncode = duplicateEncode;
@@ -885,3 +885,28 @@ exports.narcissistic = narcissistic;
 // console.log(narcissistic(7));
 // console.log(narcissistic(153));
 // console.log(narcissistic(1634));
+/*
+Sum of Digits / Digital Root
+
+Description:
+Digital root is the recursive sum of all the digits in a number.
+
+Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+
+Examples
+    16  -->  1 + 6 = 7
+   942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
+493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
+*/
+const digitalRoot = (n) => {
+    let values = n.toString().split("");
+    let result = 0;
+    for (let i = 0; i < values.length; i++) {
+        result += Number(values[i]);
+    }
+    return result.toString().split("").length > 1 ? (0, exports.digitalRoot)(result) : result;
+};
+exports.digitalRoot = digitalRoot;
+// console.log(digitalRoot(16));
+// console.log(digitalRoot(456));
