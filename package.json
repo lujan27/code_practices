@@ -4,7 +4,7 @@
   "description": "",
   "main": "practices.js",
   "scripts": {
-    "test": "mocha --require ts-node/register test/armstrong-number.spec.ts"
+    "test": "mocha --require ts-node/register test/digitalRoot.spec.ts"
   },
   "keywords": [],
   "author": "",
