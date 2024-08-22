@@ -1,6 +1,52 @@
 import { expect } from "chai";
-import { missingNo } from "../practices";
+import {
+  sum,
+  lovefunc,
+  makeNegative,
+  missingNo,
+  max,
+  min,
+  narcissistic,
+  digitalRoot,
+} from "../practices";
 
+/* Sum Arrays */
+describe("Sum Arrays", () => {
+  it("Should return a result", () => {
+    expect(sum([1, 5.2, 4, 0, -1])).to.equal(9.2);
+  });
+
+  it("Should return zero", () => {
+    expect(sum([])).to.equal(0);
+  });
+});
+
+/* Opposites Attract */
+describe("Opposites Attract", () => {
+  it("Should return true", () => {
+    expect(lovefunc(1, 4)).to.equal(true);
+    expect(lovefunc(0, 1)).to.equal(true);
+  });
+
+  it("Should return false", () => {
+    expect(lovefunc(2, 2)).to.equal(false);
+  });
+});
+
+/* Return Negative */
+describe("Return Negative", () => {
+  it("Should return negative number", () => {
+    expect(makeNegative(1)).to.equal(-1);
+    expect(makeNegative(-5)).to.equal(-5);
+    expect(makeNegative(0.12)).to.equal(-0.12);
+  });
+
+  it("Should return zero", () => {
+    expect(makeNegative(0)).to.equal(0);
+  });
+});
+
+/* Finding the missing number */
 let arr1 = [
   9, 45, 53, 10, 100, 30, 85, 72, 69, 93, 98, 27, 73, 82, 91, 60, 5, 79, 88, 18,
   71, 36, 44, 22, 89, 40, 59, 80, 81, 67, 25, 54, 13, 64, 56, 39, 48, 92, 84,
@@ -46,5 +92,37 @@ describe("Missing Number", () => {
   });
   it("Array #4", () => {
     expect(missingNo(arr4)).to.equal(100);
+  });
+});
+
+/* Max and Min value */
+describe("Min function test", () => {
+  it("Should return the min value", () => {
+    expect(min([-52, 56, 30, 29, -54, 0, -110])).to.equal(-110);
+    expect(min([42, 54, 65, 87, 0])).to.equal(0);
+  });
+});
+
+describe("Max function test", () => {
+  it("Should return the highest value", () => {
+    expect(max([4, 6, 2, 1, 9, 63, -134, 566])).to.equal(566);
+    expect(max([5])).to.equal(5);
+  });
+});
+
+/* Armstrong Number */
+describe("Armstrong number", () => {
+  it("Should return true", () => {
+    expect(narcissistic(7)).to.equal(true);
+    expect(narcissistic(153)).to.equal(true);
+    expect(narcissistic(1634)).to.equal(true);
+  });
+});
+
+/* Sum of Digits / Digital Root */
+describe("Digital root", () => {
+  it("Should return one length number", () => {
+    expect(digitalRoot(16)).to.equal(7);
+    expect(digitalRoot(456)).to.equal(6);
   });
 });
