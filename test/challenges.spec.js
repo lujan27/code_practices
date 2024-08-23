@@ -114,3 +114,21 @@ describe("Alphabet position", () => {
         (0, chai_1.expect)((0, practices_1.alphabetPosition)("The narwhal bacons at midnight.")).to.equal("20 8 5 14 1 18 23 8 1 12 2 1 3 15 14 19 1 20 13 9 4 14 9 7 8 20");
     });
 });
+/* Who likes it? */
+describe("Likes count", () => {
+    it("Should return no one liked", () => {
+        (0, chai_1.expect)((0, practices_1.likes)([])).to.equal("no one likes this");
+    });
+    it("Should return one person liked", () => {
+        (0, chai_1.expect)((0, practices_1.likes)(["Peter"])).to.equal("Peter likes this");
+    });
+    it("Should return two people liked", () => {
+        (0, chai_1.expect)((0, practices_1.likes)(["Jacob", "Alex"])).to.equal("Jacob and Alex like this");
+    });
+    it("Should return three people liked", () => {
+        (0, chai_1.expect)((0, practices_1.likes)(["Max", "John", "Mark"])).to.equal("Max, John and Mark like this");
+    });
+    it("Should return two people and more liked", () => {
+        (0, chai_1.expect)((0, practices_1.likes)(["Alex", "Jacob", "Mark", "Max"])).to.equal("Alex, Jacob and 2 others like this");
+    });
+});

@@ -1094,9 +1094,60 @@ export function alphabetPosition(text: string): string {
   return positions.trim();
 }
 
-console.log(alphabetPosition("The sunset sets at twelve o' clock."));
-console.log(alphabetPosition("The narwhal bacons at midnight."));
-console.log(alphabetPosition("[opakk_7"));
-console.log(alphabetPosition("2+:)|mmg"));
-console.log(alphabetPosition("q;w{/e,*"));
-console.log(alphabetPosition(",:;]ae}k"));
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+// console.log(alphabetPosition("The narwhal bacons at midnight."));
+// console.log(alphabetPosition("[opakk_7"));
+// console.log(alphabetPosition("2+:)|mmg"));
+// console.log(alphabetPosition("q;w{/e,*"));
+// console.log(alphabetPosition(",:;]ae}k"));
+
+/*
+Who likes it?
+
+Description:
+You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+
+[]                                -->  "no one likes this"
+["Peter"]                         -->  "Peter likes this"
+["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+Note: For 4 or more names, the number in "and 2 others" simply increases.
+
+*/
+
+export const likes = (a: string[]): string => {
+  // TODO
+
+  let peopleLiked: string = "";
+  switch (a.length) {
+    case 0:
+      peopleLiked = "no one likes this";
+      break;
+    case 1:
+      peopleLiked = `${a[0]} likes this`;
+      break;
+    case 2:
+      peopleLiked = `${a[0]} and ${a[1]} like this`;
+      break;
+    case 3:
+      peopleLiked = `${a[0]}, ${a[1]} and ${a[2]} like this`;
+      break;
+    default:
+      peopleLiked = `${a[0]}, ${a[1]} and ${a.length - 2} others like this`;
+      break;
+  }
+
+  return peopleLiked;
+};
+
+// console.log(likes([]));
+// console.log(likes(["Peter"]));
+// console.log(likes(["Jacob", "Alex"]));
+// console.log(likes(["Max", "John", "Mark"]));
+// console.log(likes(["Alex", "Jacob", "Mark", "Max"]));
+// console.log(
+//   likes(["Alex", "Jacob", "Mark", "Max", "Orlando", "Jexe", "Eduardo"])
+// );
