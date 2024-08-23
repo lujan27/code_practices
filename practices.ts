@@ -1063,3 +1063,40 @@ export const digitalRoot = (n: number): number => {
 
 // console.log(digitalRoot(16));
 // console.log(digitalRoot(456));
+
+/* Replace With Alphabet Position
+
+In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+If anything in the text isn't a letter, ignore it and don't return it.
+
+"a" = 1, "b" = 2, etc.
+
+Example
+Input = "The sunset sets at twelve o' clock."
+Output = "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+*/
+
+export function alphabetPosition(text: string): string {
+  let toLow: string[] = text.toLowerCase().split("");
+
+  let modified: string[] = [];
+
+  let positions: string = "";
+  for (let low of toLow) {
+    for (let word of letras) {
+      if (low == word) {
+        modified.push(low);
+        positions += letras.indexOf(word) + 1 + " ";
+      }
+    }
+  }
+  return positions.trim();
+}
+
+console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+console.log(alphabetPosition("The narwhal bacons at midnight."));
+console.log(alphabetPosition("[opakk_7"));
+console.log(alphabetPosition("2+:)|mmg"));
+console.log(alphabetPosition("q;w{/e,*"));
+console.log(alphabetPosition(",:;]ae}k"));
