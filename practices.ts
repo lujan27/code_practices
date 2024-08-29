@@ -1151,3 +1151,32 @@ export const likes = (a: string[]): string => {
 // console.log(
 //   likes(["Alex", "Jacob", "Mark", "Max", "Orlando", "Jexe", "Eduardo"])
 // );
+
+/* Turing's Equation */
+
+export const isTuringEquation = function (s: string) {
+  //coding and coding..
+  let noSymbols: string = s.replace(/[+=]/g, " ");
+
+  let arrSymbols = noSymbols.split(" ");
+
+  let newString: string[] = [];
+  for (let sym of arrSymbols) {
+    newString.push(sym.split("").reverse().join(""));
+  }
+
+  if (Number(newString[0]) + Number(newString[1]) == Number(newString[2])) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+// console.log(isTuringEquation("73+42=16"));
+// console.log(isTuringEquation("5+8=13"));
+// console.log(isTuringEquation("10+20=30"));
+// console.log(isTuringEquation("0001000+000200=00030"));
+// console.log(isTuringEquation("1234+5=1239"));
+// console.log(isTuringEquation("1+0=0"));
+// console.log(isTuringEquation("7000+8000=51"));
+// console.log(isTuringEquation("0+0=0"));

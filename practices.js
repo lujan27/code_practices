@@ -23,7 +23,7 @@ What We're Testing
 We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 Advanced users may find this extremely easy and can easily write this in one line.*/
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.likes = exports.digitalRoot = exports.narcissistic = exports.max = exports.min = exports.missingNo = exports.makeNegative = exports.lovefunc = exports.sum = void 0;
+exports.isTuringEquation = exports.likes = exports.digitalRoot = exports.narcissistic = exports.max = exports.min = exports.missingNo = exports.makeNegative = exports.lovefunc = exports.sum = void 0;
 exports.hoopCount = hoopCount;
 exports.spinWords = spinWords;
 exports.duplicateEncode = duplicateEncode;
@@ -990,3 +990,28 @@ exports.likes = likes;
 // console.log(
 //   likes(["Alex", "Jacob", "Mark", "Max", "Orlando", "Jexe", "Eduardo"])
 // );
+/* Turing's Equation */
+const isTuringEquation = function (s) {
+    //coding and coding..
+    let noSymbols = s.replace(/[+=]/g, " ");
+    let arrSymbols = noSymbols.split(" ");
+    let newString = [];
+    for (let sym of arrSymbols) {
+        newString.push(sym.split("").reverse().join(""));
+    }
+    if (Number(newString[0]) + Number(newString[1]) == Number(newString[2])) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
+exports.isTuringEquation = isTuringEquation;
+// console.log(isTuringEquation("73+42=16"));
+// console.log(isTuringEquation("5+8=13"));
+// console.log(isTuringEquation("10+20=30"));
+// console.log(isTuringEquation("0001000+000200=00030"));
+// console.log(isTuringEquation("1234+5=1239"));
+// console.log(isTuringEquation("1+0=0"));
+// console.log(isTuringEquation("7000+8000=51"));
+// console.log(isTuringEquation("0+0=0"));
