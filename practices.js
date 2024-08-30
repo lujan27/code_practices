@@ -993,25 +993,20 @@ exports.likes = likes;
 /* Turing's Equation */
 const isTuringEquation = function (s) {
     //coding and coding..
-    let noSymbols = s.replace(/[+=]/g, " ");
-    let arrSymbols = noSymbols.split(" ");
+    let arrSymbols = s.replace(/[+=]/g, " ").split(" ");
     let newString = [];
     for (let sym of arrSymbols) {
-        newString.push(sym.split("").reverse().join(""));
+        newString.push(Number(sym.split("").reverse().join("")));
     }
-    if (Number(newString[0]) + Number(newString[1]) == Number(newString[2])) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    let [el1, el2, el3] = [...newString];
+    return el1 + el2 == el3 ? true : false;
 };
 exports.isTuringEquation = isTuringEquation;
-// console.log(isTuringEquation("73+42=16"));
-// console.log(isTuringEquation("5+8=13"));
-// console.log(isTuringEquation("10+20=30"));
-// console.log(isTuringEquation("0001000+000200=00030"));
-// console.log(isTuringEquation("1234+5=1239"));
-// console.log(isTuringEquation("1+0=0"));
-// console.log(isTuringEquation("7000+8000=51"));
-// console.log(isTuringEquation("0+0=0"));
+console.log((0, exports.isTuringEquation)("73+42=16"));
+console.log((0, exports.isTuringEquation)("5+8=13"));
+console.log((0, exports.isTuringEquation)("10+20=30"));
+console.log((0, exports.isTuringEquation)("0001000+000200=00030"));
+console.log((0, exports.isTuringEquation)("1234+5=1239"));
+console.log((0, exports.isTuringEquation)("1+0=0"));
+console.log((0, exports.isTuringEquation)("7000+8000=51"));
+console.log((0, exports.isTuringEquation)("0+0=0"));

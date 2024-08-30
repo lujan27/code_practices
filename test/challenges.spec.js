@@ -132,3 +132,18 @@ describe("Likes count", () => {
         (0, chai_1.expect)((0, practices_1.likes)(["Alex", "Jacob", "Mark", "Max"])).to.equal("Alex, Jacob and 2 others like this");
     });
 });
+/* Turing's Equation */
+describe("Turing Equation", () => {
+    it("Should return true", () => {
+        (0, chai_1.expect)((0, practices_1.isTuringEquation)("73+42=16")).to.equal(true);
+        (0, chai_1.expect)((0, practices_1.isTuringEquation)("10+20=30")).to.equal(true);
+        (0, chai_1.expect)((0, practices_1.isTuringEquation)("0001000+000200=00030")).to.equal(true);
+        (0, chai_1.expect)((0, practices_1.isTuringEquation)("7000+8000=51")).to.equal(true);
+        (0, chai_1.expect)((0, practices_1.isTuringEquation)("0+0=0")).to.equal(true);
+    });
+    it("Should return false", () => {
+        (0, chai_1.expect)((0, practices_1.isTuringEquation)("5+8=13")).to.equal(false);
+        (0, chai_1.expect)((0, practices_1.isTuringEquation)("1234+5=1239")).to.equal(false);
+        (0, chai_1.expect)((0, practices_1.isTuringEquation)("1+0=0")).to.equal(false);
+    });
+});

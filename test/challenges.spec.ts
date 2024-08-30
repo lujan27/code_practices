@@ -10,6 +10,7 @@ import {
   digitalRoot,
   alphabetPosition,
   likes,
+  isTuringEquation,
 } from "../practices";
 
 /* Sum Arrays */
@@ -163,5 +164,23 @@ describe("Likes count", () => {
     expect(likes(["Alex", "Jacob", "Mark", "Max"])).to.equal(
       "Alex, Jacob and 2 others like this"
     );
+  });
+});
+
+/* Turing's Equation */
+
+describe("Turing Equation", () => {
+  it("Should return true", () => {
+    expect(isTuringEquation("73+42=16")).to.equal(true);
+    expect(isTuringEquation("10+20=30")).to.equal(true);
+    expect(isTuringEquation("0001000+000200=00030")).to.equal(true);
+    expect(isTuringEquation("7000+8000=51")).to.equal(true);
+    expect(isTuringEquation("0+0=0")).to.equal(true);
+  });
+
+  it("Should return false", () => {
+    expect(isTuringEquation("5+8=13")).to.equal(false);
+    expect(isTuringEquation("1234+5=1239")).to.equal(false);
+    expect(isTuringEquation("1+0=0")).to.equal(false);
   });
 });
