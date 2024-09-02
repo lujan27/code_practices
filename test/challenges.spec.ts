@@ -1,4 +1,4 @@
-import { expect } from "chai";
+import { expect, should } from "chai";
 import {
   sum,
   lovefunc,
@@ -11,6 +11,7 @@ import {
   alphabetPosition,
   likes,
   isTuringEquation,
+  isTriangle,
 } from "../practices";
 
 /* Sum Arrays */
@@ -182,5 +183,16 @@ describe("Turing Equation", () => {
     expect(isTuringEquation("5+8=13")).to.equal(false);
     expect(isTuringEquation("1234+5=1239")).to.equal(false);
     expect(isTuringEquation("1+0=0")).to.equal(false);
+  });
+});
+
+/* Is this a triangle? */
+
+describe("Is a triangle", () => {
+  it("should return true", () => {
+    expect(isTriangle(1, 2, 2)).to.equal(true);
+  });
+  it("should return false", () => {
+    expect(isTriangle(7, 2, 2)).to.equal(false);
   });
 });
