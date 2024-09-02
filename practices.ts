@@ -1168,11 +1168,32 @@ export const isTuringEquation = function (s: string) {
   return el1 + el2 == el3 ? true : false;
 };
 
-console.log(isTuringEquation("73+42=16"));
-console.log(isTuringEquation("5+8=13"));
-console.log(isTuringEquation("10+20=30"));
-console.log(isTuringEquation("0001000+000200=00030"));
-console.log(isTuringEquation("1234+5=1239"));
-console.log(isTuringEquation("1+0=0"));
-console.log(isTuringEquation("7000+8000=51"));
-console.log(isTuringEquation("0+0=0"));
+// console.log(isTuringEquation("73+42=16"));
+// console.log(isTuringEquation("5+8=13"));
+// console.log(isTuringEquation("10+20=30"));
+// console.log(isTuringEquation("0001000+000200=00030"));
+// console.log(isTuringEquation("1234+5=1239"));
+// console.log(isTuringEquation("1+0=0"));
+// console.log(isTuringEquation("7000+8000=51"));
+// console.log(isTuringEquation("0+0=0"));
+
+/* Is this a triangle? */
+
+export const isTriangle = function (a: number, b: number, c: number): boolean {
+  if (a <= 0 || b <= 0 || c <= 0) {
+    return false;
+  }
+  if (a + b > c && a + c > b && b + c > a) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+// console.log(isTriangle(1, 2, 3));
+// console.log(isTriangle(7, 2, 2));
+// console.log(isTriangle(1, 2, 2));
+// console.log(isTriangle(6, -2, 5));
+// console.log(isTriangle(-2, 1, 2));
+// console.log(isTriangle(2, 2, -2));
+// console.log(isTriangle(-2, 10, 9));

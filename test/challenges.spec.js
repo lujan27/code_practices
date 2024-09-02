@@ -147,3 +147,12 @@ describe("Turing Equation", () => {
         (0, chai_1.expect)((0, practices_1.isTuringEquation)("1+0=0")).to.equal(false);
     });
 });
+/* Is this a triangle? */
+describe("Is a triangle", () => {
+    it("should return true", () => {
+        (0, chai_1.expect)((0, practices_1.isTriangle)(1, 2, 2)).to.equal(true);
+    });
+    it("should return false", () => {
+        (0, chai_1.expect)((0, practices_1.isTriangle)(7, 2, 2)).to.equal(false);
+    });
+});
