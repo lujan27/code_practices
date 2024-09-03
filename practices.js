@@ -23,7 +23,7 @@ What We're Testing
 We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 Advanced users may find this extremely easy and can easily write this in one line.*/
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isTriangle = exports.isTuringEquation = exports.likes = exports.digitalRoot = exports.narcissistic = exports.max = exports.min = exports.missingNo = exports.makeNegative = exports.lovefunc = exports.sum = void 0;
+exports.findNeedle = exports.isTriangle = exports.isTuringEquation = exports.likes = exports.digitalRoot = exports.narcissistic = exports.max = exports.min = exports.missingNo = exports.makeNegative = exports.lovefunc = exports.sum = void 0;
 exports.hoopCount = hoopCount;
 exports.spinWords = spinWords;
 exports.duplicateEncode = duplicateEncode;
@@ -1030,3 +1030,76 @@ exports.isTriangle = isTriangle;
 // console.log(isTriangle(-2, 1, 2));
 // console.log(isTriangle(2, 2, -2));
 // console.log(isTriangle(-2, 10, 9));
+/* A Needle in the Haystack */
+const findNeedle = function (haystack) {
+    // your code here
+    return `found the needle at position ${haystack.indexOf("needle")}`;
+};
+exports.findNeedle = findNeedle;
+console.log((0, exports.findNeedle)([
+    "3",
+    "123124234",
+    undefined,
+    "needle",
+    "world",
+    "hay",
+    2,
+    "3",
+    true,
+    false,
+]));
+console.log((0, exports.findNeedle)([
+    "283497238987234",
+    "a dog",
+    "a cat",
+    "some random junk",
+    "a piece of hay",
+    "needle",
+    "something somebody lost a while ago",
+]));
+console.log((0, exports.findNeedle)([
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    8,
+    7,
+    5,
+    4,
+    3,
+    4,
+    5,
+    6,
+    67,
+    5,
+    5,
+    3,
+    3,
+    4,
+    2,
+    34,
+    234,
+    23,
+    4,
+    234,
+    324,
+    324,
+    "needle",
+    1,
+    2,
+    3,
+    4,
+    5,
+    5,
+    6,
+    5,
+    4,
+    32,
+    3,
+    45,
+    54,
+]));
