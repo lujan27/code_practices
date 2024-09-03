@@ -156,3 +156,16 @@ describe("Is a triangle", () => {
         (0, chai_1.expect)((0, practices_1.isTriangle)(7, 2, 2)).to.equal(false);
     });
 });
+/* Invert Values */
+describe("Invert vaues", () => {
+    it("Should return an array with the symbols inverted", () => {
+        (0, chai_1.expect)((0, practices_1.invert)([1, 2, 3, 4, 5])).to.deep.equal([-1, -2, -3, -4, -5]);
+        (0, chai_1.expect)((0, practices_1.invert)([1, -2, 3, -4, 5])).to.deep.equal([-1, 2, -3, 4, -5]);
+    });
+    it("Should return a zero on the array", () => {
+        (0, chai_1.expect)((0, practices_1.invert)([0])).to.deep.equal([0]);
+    });
+    it("Should return an empty array", () => {
+        (0, chai_1.expect)((0, practices_1.invert)([])).to.deep.equal([]);
+    });
+});
