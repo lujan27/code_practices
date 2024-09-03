@@ -12,6 +12,7 @@ import {
   likes,
   isTuringEquation,
   isTriangle,
+  invert,
 } from "../practices";
 
 /* Sum Arrays */
@@ -194,5 +195,20 @@ describe("Is a triangle", () => {
   });
   it("should return false", () => {
     expect(isTriangle(7, 2, 2)).to.equal(false);
+  });
+});
+
+/* Invert Values */
+
+describe("Invert vaues", () => {
+  it("Should return an array with the symbols inverted", () => {
+    expect(invert([1, 2, 3, 4, 5])).to.deep.equal([-1, -2, -3, -4, -5]);
+    expect(invert([1, -2, 3, -4, 5])).to.deep.equal([-1, 2, -3, 4, -5]);
+  });
+  it("Should return a zero on the array", () => {
+    expect(invert([0])).to.deep.equal([0]);
+  });
+  it("Should return an empty array", () => {
+    expect(invert([])).to.deep.equal([]);
   });
 });
