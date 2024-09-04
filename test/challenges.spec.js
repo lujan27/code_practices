@@ -179,3 +179,12 @@ describe("Century from year", () => {
         (0, chai_1.expect)((0, practices_1.century)(2742)).to.equal(28);
     });
 });
+/* If you can't sleep, just count sheep!! */
+describe("Counting sheeps", () => {
+    it("Should count the sheeps", () => {
+        (0, chai_1.expect)((0, practices_1.sheep)(0)).to.equal("");
+        (0, chai_1.expect)((0, practices_1.sheep)(1)).to.equal("1 sheep...");
+        (0, chai_1.expect)((0, practices_1.sheep)(2)).to.equal("1 sheep...2 sheep...");
+        (0, chai_1.expect)((0, practices_1.sheep)(3)).to.equal("1 sheep...2 sheep...3 sheep...");
+    });
+});

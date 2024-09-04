@@ -14,6 +14,7 @@ import {
   isTriangle,
   invert,
   century,
+  sheep,
 } from "../practices";
 
 /* Sum Arrays */
@@ -223,5 +224,16 @@ describe("Century from year", () => {
     expect(century(1601)).to.equal(17);
     expect(century(2000)).to.equal(20);
     expect(century(2742)).to.equal(28);
+  });
+});
+
+/* If you can't sleep, just count sheep!! */
+
+describe("Counting sheeps", () => {
+  it("Should count the sheeps", () => {
+    expect(sheep(0)).to.equal("");
+    expect(sheep(1)).to.equal("1 sheep...");
+    expect(sheep(2)).to.equal("1 sheep...2 sheep...");
+    expect(sheep(3)).to.equal("1 sheep...2 sheep...3 sheep...");
   });
 });
