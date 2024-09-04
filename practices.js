@@ -23,7 +23,7 @@ What We're Testing
 We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 Advanced users may find this extremely easy and can easily write this in one line.*/
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.century = exports.invert = exports.findNeedle = exports.isTriangle = exports.isTuringEquation = exports.likes = exports.digitalRoot = exports.narcissistic = exports.max = exports.min = exports.missingNo = exports.makeNegative = exports.lovefunc = exports.sum = void 0;
+exports.sheep = exports.century = exports.invert = exports.findNeedle = exports.isTriangle = exports.isTuringEquation = exports.likes = exports.digitalRoot = exports.narcissistic = exports.max = exports.min = exports.missingNo = exports.makeNegative = exports.lovefunc = exports.sum = void 0;
 exports.hoopCount = hoopCount;
 exports.spinWords = spinWords;
 exports.duplicateEncode = duplicateEncode;
@@ -1133,3 +1133,16 @@ exports.century = century;
 // console.log(century(1601));
 // console.log(century(2000));
 // console.log(century(2742));
+/* If you can't sleep, just count sheep!! */
+const sheep = function (num) {
+    let sheeps = "";
+    for (let i = 1; i <= num; i++) {
+        sheeps += `${i} sheep...`;
+    }
+    return sheeps;
+};
+exports.sheep = sheep;
+// console.log(sheep(0));
+// console.log(sheep(1));
+// console.log(sheep(2));
+// console.log(sheep(3));

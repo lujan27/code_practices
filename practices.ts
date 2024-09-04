@@ -1306,3 +1306,19 @@ export const century = function (year: number): number {
 // console.log(century(1601));
 // console.log(century(2000));
 // console.log(century(2742));
+
+/* If you can't sleep, just count sheep!! */
+
+export const sheep = function (num: number): string {
+  let sheeps: string = "";
+  for (let i = 1; i <= num; i++) {
+    sheeps += `${i} sheep...`;
+  }
+
+  return sheeps;
+};
+
+// console.log(sheep(0));
+// console.log(sheep(1));
+// console.log(sheep(2));
+// console.log(sheep(3));
