@@ -1293,3 +1293,16 @@ export const invert = function (array: number[]): number[] {
 // console.log(invert([1, -2, 3, -4, 5]));
 // console.log(invert([]));
 // console.log(invert([0]));
+
+/* Century From Year */
+
+export const century = function (year: number): number {
+  let rounded: number = year / 100;
+  return rounded % 1 != 0 ? Math.ceil(rounded) : rounded;
+};
+
+// console.log(century(1705));
+// console.log(century(1900));
+// console.log(century(1601));
+// console.log(century(2000));
+// console.log(century(2742));

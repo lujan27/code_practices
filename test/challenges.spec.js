@@ -169,3 +169,13 @@ describe("Invert vaues", () => {
         (0, chai_1.expect)((0, practices_1.invert)([])).to.deep.equal([]);
     });
 });
+/* Century From Year */
+describe("Century from year", () => {
+    it("Should return the number of centuries", () => {
+        (0, chai_1.expect)((0, practices_1.century)(1705)).to.equal(18);
+        (0, chai_1.expect)((0, practices_1.century)(1900)).to.equal(19);
+        (0, chai_1.expect)((0, practices_1.century)(1601)).to.equal(17);
+        (0, chai_1.expect)((0, practices_1.century)(2000)).to.equal(20);
+        (0, chai_1.expect)((0, practices_1.century)(2742)).to.equal(28);
+    });
+});
