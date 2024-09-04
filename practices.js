@@ -23,7 +23,7 @@ What We're Testing
 We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 Advanced users may find this extremely easy and can easily write this in one line.*/
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.invert = exports.findNeedle = exports.isTriangle = exports.isTuringEquation = exports.likes = exports.digitalRoot = exports.narcissistic = exports.max = exports.min = exports.missingNo = exports.makeNegative = exports.lovefunc = exports.sum = void 0;
+exports.century = exports.invert = exports.findNeedle = exports.isTriangle = exports.isTuringEquation = exports.likes = exports.digitalRoot = exports.narcissistic = exports.max = exports.min = exports.missingNo = exports.makeNegative = exports.lovefunc = exports.sum = void 0;
 exports.hoopCount = hoopCount;
 exports.spinWords = spinWords;
 exports.duplicateEncode = duplicateEncode;
@@ -1122,3 +1122,14 @@ exports.invert = invert;
 // console.log(invert([1, -2, 3, -4, 5]));
 // console.log(invert([]));
 // console.log(invert([0]));
+/* Century From Year */
+const century = function (year) {
+    let rounded = year / 100;
+    return rounded % 1 != 0 ? Math.ceil(rounded) : rounded;
+};
+exports.century = century;
+// console.log(century(1705));
+// console.log(century(1900));
+// console.log(century(1601));
+// console.log(century(2000));
+// console.log(century(2742));

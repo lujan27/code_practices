@@ -13,6 +13,7 @@ import {
   isTuringEquation,
   isTriangle,
   invert,
+  century,
 } from "../practices";
 
 /* Sum Arrays */
@@ -210,5 +211,17 @@ describe("Invert vaues", () => {
   });
   it("Should return an empty array", () => {
     expect(invert([])).to.deep.equal([]);
+  });
+});
+
+/* Century From Year */
+
+describe("Century from year", () => {
+  it("Should return the number of centuries", () => {
+    expect(century(1705)).to.equal(18);
+    expect(century(1900)).to.equal(19);
+    expect(century(1601)).to.equal(17);
+    expect(century(2000)).to.equal(20);
+    expect(century(2742)).to.equal(28);
   });
 });
